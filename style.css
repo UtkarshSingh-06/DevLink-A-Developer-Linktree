@@ -1,0 +1,134 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #FCEEC9;  
+  color: #333;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+}
+
+.container {
+  background-color: white;
+  padding: 2rem;  
+  border-radius: 1rem;  
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;  
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.profile-pic {
+  width: 120px;  
+  border-radius: 50%;  
+  margin-bottom: 1rem;  
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #666; 
+  margin-top: 0.5rem;
+}
+
+
+ .link-buttons {
+  display: flex;
+  flex-direction: column;  
+  gap: 1rem;  
+  margin: 2rem 0;
+}
+
+
+ .link-buttons a {
+  background-color: #e4281f;  
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+
+.link-buttons a:hover {
+  background-color: #FFBE54;  
+}
+
+#toggle-theme {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #e4281f;  
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#toggle-theme:hover {
+  background-color: #FFBE54;  
+  color: black;  
+}
+
+
+body.dark-mode {
+  background-color: #121212;  
+}
+
+body.dark-mode .container {
+  background-color: #1e1e1e;
+  color: #f4f4f4;
+}
+
+body.dark-mode .link-buttons a {
+  background-color: #FFBE54;  
+  color: #121212;
+}
+
+body.dark-mode .link-buttons a:hover {
+  background-color: #e4281f; 
+  color: white;
+}
+
+body.dark-mode #toggle-theme {
+  background-color: #FFBE54; 
+  color: #121212;
+}
+
+body.dark-mode #toggle-theme:hover {
+  background-color: #e4281f;
+  color: white;
+} 
+
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, bottom 0.5s ease;
+  z-index: 1000;
+  font-size: 0.95rem;
+}
+
+.toast.show {
+  opacity: 1;
+  bottom: 3rem;
+}
+
